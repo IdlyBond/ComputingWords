@@ -6,7 +6,7 @@ public class Main {
         Computer computer = new Computer();
         Sorter sorter = new Sorter();
         Printer printer = new Printer();
-        List<String> words = new ArrayList<>(computer.splitExcept(Lines.TEXT.toString(), "[?!.,]", " "));
+        List<String> words = new ArrayList<>(computer.splitExcept(Lines.TEXT.toString(), "[?!.,-]", " "));
         System.out.println("Слов в тексте: " + words.size());
         Map<String, Integer> wordsRepeats = new LinkedHashMap<>(computer.countRepeatable(words));
         sorter.sort(wordsRepeats);
